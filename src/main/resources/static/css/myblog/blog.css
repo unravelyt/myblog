@@ -1,0 +1,77 @@
+/*在同一行内*/
+.y-oneline{
+    display: inline;
+}
+/*向右浮动*/
+.y-floatRight{
+    float: right;
+}
+/*向左浮动*/
+.y-floatleft{
+    float: left;
+}
+
+/*右外间距*/
+.y-rMargin-sm{
+    margin: 0 30px 0 0;
+}
+
+/*左右外边距*/
+.y-rlMargin-md{
+    margin: 0 70px;
+}
+/*左右外边距*/
+.y-rlMargin-sm{
+    margin: 0 30px;
+}
+.y-margin-sm{
+    margin: 5px 20px;
+}
+
+/*上下内边距*/
+.y-tbpadding-sm{
+    padding: 20px 0;
+}
+.y-toppadding-title{
+    margin: 5px 0;
+}
+/*上下高度*/
+.y-height-150{
+    height: 150px;
+}
+.y-width-30{
+    width: 30%;
+}
+.y-width-130{
+    width: 130px;
+}
+/*a标签无下划线*/
+.y-a-nodecoration a{
+    text-decoration: none;
+}
+
+/*小-图片头像*/
+.y-img-50{
+    width: 50px;
+}
+
+/*撑起父级高度*/
+.y-father{
+    overflow:hidden;
+}
+
+/*颜色*/
+.y-color-brown{
+    color: #761c19;
+    overflow: hidden;
+}
+.y-color-blue{
+    color: #00b59f;
+    font-weight: bold;
+}
+.y-color-red{
+    color: red;
+}
+.y-redTag{
+    border: red solid 1px;
+}
