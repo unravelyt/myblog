@@ -75,3 +75,9 @@
 .y-redTag{
     border: red solid 1px;
 }
+/*监视高度*/
+@media (max-height: 900px){
+    .y-mid-up{
+        height: 700px;
+    }
+}
