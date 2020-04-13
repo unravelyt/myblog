@@ -27,6 +27,9 @@
 .y-margin-sm{
     margin: 5px 20px;
 }
+.y-padding-xs{
+    margin: 5px;
+}
 
 /*上下内边距*/
 .y-tbpadding-sm{
@@ -48,6 +51,12 @@
 /*a标签无下划线*/
 .y-a-nodecoration a{
     text-decoration: none;
+    color: black;
+}
+
+.y-notDecorate{
+    color: black;
+    text-decoration: none;
 }
 
 /*小-图片头像*/
@@ -60,6 +69,13 @@
     overflow:hidden;
 }
 
+/*中间留空*/
+.y-midup-mid{
+    margin-bottom: 350px;
+}
+.y-midup-lg{
+    margin-bottom: 600px;
+}
 /*颜色*/
 .y-color-brown{
     color: #761c19;
@@ -68,6 +84,7 @@
 .y-color-blue{
     color: #00b59f;
     font-weight: bold;
+    font-size: large;
 }
 .y-color-red{
     color: red;
@@ -75,9 +92,17 @@
 .y-redTag{
     border: red solid 1px;
 }
-/*监视高度*/
-@media (max-height: 900px){
-    .y-mid-up{
-        height: 700px;
-    }
+/*字体样式*/
+.y-font-light{
+    color: #333;
+    letter-spacing: 3px;
+    font-weight: 300; /*定义由粗到细的字符。400 等同于 normal，而 700 等同于 bold。*/
+}
+
+/*按钮去除背景和边框*/
+.y-btn-clarity{
+    border:white;
+    outline: none;
+    background-color:rgba(0,0,0,0);
+    box-shadow: none;
 }

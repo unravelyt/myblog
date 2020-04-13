@@ -52,15 +52,59 @@
 
 <!--中间内容-->
 <div class="container-fluid mid-body">
-    <div class="y-mid-up">
-        <div class="panel panel-default">
-            <div class="panel-heading">分类</div>
-            <div class="panel-body">
-                生平
+    <div class="y-midup-mid">
+        <div class="col-sm-6 col-sm-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img src="../static/images/demo/kk.png" class="img-rounded img-responsive">
+                </div>
             </div>
         </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">关于我</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <p class="y-font-light">&nbsp;&nbsp;李仁密，一个独立开发者，折腾在 0 和 1 世界的大叔；一个终身学习者，誓将学习无限循环. 希望结识可以共同成长的小伙伴.
+                            热爱编程，喜欢折腾，正在探索高效学习编程技术的方法...
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="label label-warning y-padding-xs">编程</span>
+                        <span class="label label-warning y-padding-xs">写作</span>
+                        <span class="label label-warning y-padding-xs">思考</span>
+                        <span class="label label-warning y-padding-xs">运动</span>
+
+                    </li>
+                    <li class="list-group-item">
+                        <span class="label label-success y-padding-xs">Java</span>
+                        <span class="label label-success y-padding-xs">React</span>
+                        <span class="label label-success y-padding-xs">JavaScript</span>
+                    </li>
+                    <li class="list-group-item">
+                        <a data-toggle="popover" data-placement="bottom" data-trigger="focus">
+                            <button type="button" class="btn btn-default y-btn-clarity">
+                                <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+                            </button>
+                        </a>
+                        <a data-toggle="popover" data-placement="bottom" data-trigger="focus">
+                            <button type="button" class="btn btn-default y-btn-clarity">
+                                <span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>
+                            </button>
+                        </a>
+                        <a data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="13477778888">
+                            <button type="button" class="btn btn-default y-btn-clarity">
+                                <span class="glyphicon glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </div>
+
 
 <!-----------下边 footer----------->
 <div class="container-fluid glyphicon-object-align-bottom footer">
@@ -96,6 +140,18 @@
     </div>
 </div>
 
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({
+            animation:true,
+            html:true,
+            container:"body",
+            content:"<div>\n" +
+                "    <img src=\"../static/images/wechat.jpg\" class=\"img-responsive img-rounded\" style=\"width: 100px\">\n" +
+                "</div>"
+        })
+    })
+</script>
 
 </body>
 </html>
