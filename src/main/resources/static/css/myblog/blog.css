@@ -15,7 +15,9 @@
 .y-rMargin-sm{
     margin: 0 30px 0 0;
 }
-
+.y-rMargin-10{
+    margin: 0 10px 0 0;
+}
 /*左右外边距*/
 .y-rlMargin-md{
     margin: 0 70px;
@@ -35,13 +37,22 @@
 .y-tbpadding-sm{
     padding: 20px 0;
 }
+.y-tbpadding-md{
+    padding: 120px 0;
+}
+.y-tbpadding-xs{
+    padding: 5px 0;
+}
 .y-toppadding-title{
     margin: 5px 0;
 }
+
 /*上下高度*/
 .y-height-150{
     height: 150px;
 }
+
+/*宽度*/
 .y-width-30{
     width: 30%;
 }
@@ -54,16 +65,26 @@
     color: black;
 }
 
-.y-notDecorate{
-    color: black;
-    text-decoration: none;
+/*小-图片头像*/
+.y-img-30{
+    width: 30px;
 }
 
-/*小-图片头像*/
 .y-img-50{
     width: 50px;
 }
+.y-img-200{
+    width: 200px;
+}
+.y-img-450{
+    width: 450px;
+}
 
+@media (width: 768px) {
+    .y-img-180{
+        width: unset;
+    }
+}
 /*撑起父级高度*/
 .y-father{
     overflow:hidden;
@@ -94,9 +115,19 @@
 }
 /*字体样式*/
 .y-font-light{
-    color: #333;
+    color: #333333;
     letter-spacing: 3px;
     font-weight: 300; /*定义由粗到细的字符。400 等同于 normal，而 700 等同于 bold。*/
+}
+.y-font-mini{
+    color: #adadad;
+    font-weight: 200; /*定义由粗到细的字符。400 等同于 normal，而 700 等同于 bold。*/
+    font-size: 8px;
+}
+.y-font-xs{
+    color: #2b669a;
+    font-size: small;
+    font-weight: 600;
 }
 
 /*按钮去除背景和边框*/
@@ -105,4 +136,8 @@
     outline: none;
     background-color:rgba(0,0,0,0);
     box-shadow: none;
+}
+
+.y-btn-blueBorder{
+    border: #00B5AD solid 1px;
 }
