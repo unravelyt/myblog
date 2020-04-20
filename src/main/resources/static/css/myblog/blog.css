@@ -32,6 +32,9 @@
 .y-padding-xs{
     margin: 5px;
 }
+.y-padding-tags{
+    margin: 2px 4px;
+}
 
 /*上下内边距*/
 .y-tbpadding-sm{
@@ -80,9 +83,9 @@
     width: 450px;
 }
 
-@media (width: 768px) {
-    .y-img-180{
-        width: unset;
+@media (max-width: 750px) {
+    .y-img-200{
+        width: 350px;
     }
 }
 /*撑起父级高度*/
@@ -120,7 +123,7 @@
     font-weight: 300; /*定义由粗到细的字符。400 等同于 normal，而 700 等同于 bold。*/
 }
 .y-font-mini{
-    color: #adadad;
+    color: #a1a0a0;
     font-weight: 200; /*定义由粗到细的字符。400 等同于 normal，而 700 等同于 bold。*/
     font-size: 8px;
 }
@@ -139,5 +142,10 @@
 }
 
 .y-btn-blueBorder{
+    border: #00B5AD solid 1px;
+}
+
+/*带边框的按钮*/
+.y-btn-blue{
     border: #00B5AD solid 1px;
 }
