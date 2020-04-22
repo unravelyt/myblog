@@ -29,9 +29,16 @@
 .y-margin-sm{
     margin: 5px 20px;
 }
+.y-margin-mid{
+    margin: 70px 90px;
+}
 .y-padding-xs{
     margin: 5px;
 }
+.y-padding-mid{
+    margin: 70px;
+}
+
 .y-padding-tags{
     margin: 2px 4px;
 }
@@ -94,6 +101,9 @@
 }
 
 /*中间留空*/
+.y-midup-sm{
+    margin-bottom: 200px;
+}
 .y-midup-mid{
     margin-bottom: 350px;
 }
@@ -148,4 +158,11 @@
 /*带边框的按钮*/
 .y-btn-blue{
     border: #00B5AD solid 1px;
+}
+
+/*--------  error  -------*/
+.error-404{
+    border: palevioletred 1px solid;
+    background-color: #f7eeef;
+
 }
