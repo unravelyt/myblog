@@ -5,19 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>关于我</title>
+    <title>模板</title>
 
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/myblog/index.css">
+    <link rel="stylesheet" href="../../static/css/myblog/admin.css">
 
-    <link rel="stylesheet" href="../static/css/myblog/blog.css">
-
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
     <script src="../../static/js/jquery-3.4.1.min.js"></script>
     <script src="../../static/js/bootstrap.min.js"></script>
-
 </head>
-<body>
 
+<body>
 <!--导航-->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -28,7 +25,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">阴险の暗示</a>
+            <a class="navbar-brand" href="#">后台管理</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -51,81 +48,31 @@
 </nav>
 
 <!--中间内容-->
-<div class="container-fluid mid-body">
-    <div class="y-midup-mid">
-        <div class="col-sm-6 col-sm-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <img src="../static/images/demo/kk.png" class="img-rounded img-responsive">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">关于我</div>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <p class="y-font-light">&nbsp;&nbsp;李仁密，一个独立开发者，折腾在 0 和 1 世界的大叔；一个终身学习者，誓将学习无限循环. 希望结识可以共同成长的小伙伴.
-                            热爱编程，喜欢折腾，正在探索高效学习编程技术的方法...
-                        </p>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="label label-warning y-padding-xs">编程</span>
-                        <span class="label label-warning y-padding-xs">写作</span>
-                        <span class="label label-warning y-padding-xs">思考</span>
-                        <span class="label label-warning y-padding-xs">运动</span>
+<div class="container-fluid">
 
-                    </li>
-                    <li class="list-group-item">
-                        <span class="label label-success y-padding-xs">Java</span>
-                        <span class="label label-success y-padding-xs">React</span>
-                        <span class="label label-success y-padding-xs">JavaScript</span>
-                    </li>
-                    <li class="list-group-item">
-                        <a data-toggle="popover" data-placement="bottom" data-trigger="focus">
-                            <button type="button" class="btn btn-default y-btn-clarity">
-                                <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                            </button>
-                        </a>
-                        <a data-toggle="popover" data-placement="bottom" data-trigger="focus">
-                            <button type="button" class="btn btn-default y-btn-clarity">
-                                <span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>
-                            </button>
-                        </a>
-                        <a data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="13477778888">
-                            <button type="button" class="btn btn-default y-btn-clarity">
-                                <span class="glyphicon glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                            </button>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
 </div>
 
 
 <!-----------下边 footer----------->
-<div class="container-fluid glyphicon-object-align-bottom footer">
-    <div class="container second_footer">
+<div class="container-fluid glyphicon-object-align-bottom">
+    <div class="container">
         <div class="row">
-            <div class="text-center col-lg-2 col-md-2 col-sm-2">
+            <div class="">
                 <img class="img-rounded" src="../static/images/wechat.jpg">
             </div>
-            <div class="text-center col-lg-3 col-md-3 col-sm-3 white_border">
+            <div class="">
                 <h5>最新博客</h5>
                 <p><a href="#">用户故事（User Story）</a></p>
                 <p><a href="#">用户故事（User Story）</a></p>
                 <p><a href="#">用户故事（User Story）</a></p>
             </div>
-            <div class="text-center col-lg-3 col-md-3 col-sm-3 white_border">
+            <div class="">
                 <h5>联 系 我</h5>
                 <p><a href="#">Email：740265793@qq.com</a></p>
                 <p><a href="#">QQ：740265793</a></p>
                 <br><br>
             </div>
-            <div class="text-center col-lg-4 col-md-4 col-sm-3 white_border">
+            <div class="">
                 <h5>博    客</h5>
                 <p>这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
                 <br><br>
@@ -140,18 +87,6 @@
     </div>
 </div>
 
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover({
-            animation:true,
-            html:true,
-            container:"body",
-            content:"<div>\n" +
-                "    <img src=\"../static/images/wechat.jpg\" class=\"img-responsive img-rounded\" style=\"width: 100px\">\n" +
-                "</div>"
-        })
-    })
-</script>
-
 </body>
+
 </html>

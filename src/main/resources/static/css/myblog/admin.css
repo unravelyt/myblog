@@ -1,8 +1,129 @@
 /*   后台管理  */
+/*
+    去掉a标签的下划线，并设置颜色
+a:link ：是未被访问的样式，可以在里面加很多东西，比如说去掉下划线，换颜色等功能都能在这里实现；
+a:visited ：是已被点击后的样式，也可以在里面加很多元素，可以去下划线，改颜色，放大等功能；
+a:hover ：这个是鼠标悬停的样式，这个等下有实例介绍，我们先来认识一下，是把鼠标停在超链接的位置的时候可以设置变颜色；
+a:active ：这个说是已被激活的样式，简单得说就是能把鼠标点上去的时候，瞬间出的样式，在很多网站上都有这种样式的
+*/
+.y-a-decorate a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.y-a-decorate a{
+    color: #b6b6b6;
+    text-decoration: none;
+    target: new front;
+}
+
+/*  字体类型   */
+.y-fontType-blue{
+    color: #00B5AD;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.y-fontType-bright{
+    color: white;
+}
+.y-fontType-grey{
+    color: #b6b6b6;
+    font-weight: 300;
+}
 
 
+/*      去掉换行        */
+.y-oneLine{
+    display: inline;
+}
+
+/*      左右浮动       */
+.y-float-right{
+    float: right;
+
+}
+
+.y-clearboth{
+    clear: both;
+}
+
+/*      外边距     */
+.y-margin-sm{
+    margin: 10px 30px;
+}
+.y-marginTop-sm{
+    margin-top: 5px;
+}
+.y-marginTop-md{
+    margin-top: 60px;
+}
+.y-marginBottom-xs{
+    margin-bottom: 20px;
+}
+.y-marginTB-md{
+    margin: 80px 0 100px 0;
+}
+.y-margin-footer{
+    margin: 50px 0 20px 0;
+}
+.y-marginLR-sm{
+    margin: 0 5px;
+}
+
+/*      内边距     */
+.y-paddingBottom-sm{
+    padding-bottom: 40px;
+}
+.y-paddingTop-sm{
+    padding-top: 20px;
+}
+.y-paddingTop-md{
+    padding-top: 40px;
+}
+
+/*      边界      */
+.y-Border-left{
+    border-left: #a1a0a0 0.5px solid;
+}
+.y-Border-top{
+    border-top: #a1a0a0 0.5px solid;
+}
+.y-border-blue{
+    border-color: #00B5AD;
+}
+.y-border-bottom{
+    border-bottom: #a1a0a0 0.5px solid;
+}
+@media (max-width: 768px) {
+    .y-Border-left{
+        border-left: unset;
+        border-top: #a1a0a0 0.5px solid;
+    }
+}
 
 
+/*      宽度      */
+.y-width-22{
+    width: 22px;
+}
+.y-width-100{
+    width: 100px;
+}
+
+/*      设置背景        */
+.y-background-black{
+    background-color: black;
+}
+.y-background-piture1{
+    background: url("../../images/bg.png") repeat;
+}
+
+/*      父元素下的第一个子元素     */
+.y-firstchild-p p:first-child{
+    color: whitesmoke;
+    font-weight: bolder;
+}
 
 
 
