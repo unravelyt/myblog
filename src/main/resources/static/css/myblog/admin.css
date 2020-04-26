@@ -16,7 +16,6 @@ a:active ：这个说是已被激活的样式，简单得说就是能把鼠标�
     text-decoration: none;
     target: new front;
 }
-
 /*  字体类型   */
 .y-fontType-blue{
     color: #00B5AD;

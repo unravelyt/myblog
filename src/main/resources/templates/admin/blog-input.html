@@ -8,10 +8,11 @@
     <title>博客发布</title>
 
     <link rel="stylesheet" href="../../static/css/myblog/admin.css">
-
+    <!--markdown插件-->
+    <link rel="stylesheet" href="../../static/lib/editormd/css/style.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.css">
     <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
-    <script src="../../static/js/jquery-3.4.1.min.js"></script>
-    <script src="../../static/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -56,16 +57,18 @@
     <div class="y-marginTB-md">
         <form action="#">
             <div class="y-border-bottom y-paddingBottom-sm">
-                <div class="col-sm-8 col-sm-offset-2">
+                <div class="col-sm-10 col-sm-offset-1">
                     <div class="y-float-right">
-                        <button class="btn btn-success btn-sm">发布</button>
-                        <button class="btn btn-info btn-sm">列表</button>
+                        <div class="btn-group a" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">新 建</button>
+                            <button type="button" class="btn btn-default">列 表</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="row y-clearboth y-paddingTop-md">
-                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-sm">
+                <div class="col-sm-10 col-sm-offset-1 y-paddingTop-sm">
                     <div class="input-group">
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -80,7 +83,7 @@
                         <input type="text" class="form-control" aria-label="...">
                     </div>
                 </div>
-                <div class="col-sm-4 col-sm-offset-2 y-paddingTop-md">
+                <div class="col-sm-5 col-sm-offset-1 y-paddingTop-md">
                     <div class="input-group">
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -95,7 +98,7 @@
                         <input type="text" class="form-control" aria-label="...">
                     </div>
                 </div>
-                <div class="col-sm-4 y-paddingTop-md">
+                <div class="col-sm-5 y-paddingTop-md">
                     <div class="input-group">
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -111,7 +114,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-md">
+                <div class="col-sm-10 col-sm-offset-1 y-paddingTop-md">
                     <div class="input-group">
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -121,10 +124,22 @@
                         <input type="text" class="form-control" aria-label="...">
                     </div>
                 </div>
-                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-md">
-                    <textarea class="form-control" rows="10" placeholder="博客描述*"></textarea>
+                <div class="col-sm-10 col-sm-offset-1 y-paddingTop-md">
+                    <div id="test-editormd">
+                        <textarea style="display:none;">[TOC]
+
+                            #### Disabled options
+
+                            - TeX (Based on KaTeX);
+                            - Emoji;
+                            - Task lists;
+                            - HTML tags decode;
+                            - Flowchart and Sequence Diagram;
+
+                        </textarea>
+                    </div>
                 </div>
-                <div class="checkbox col-sm-8 col-sm-offset-2 y-paddingTop-sm">
+                <div class="checkbox col-sm-10 col-sm-offset-1 y-paddingTop-sm">
                     <label>
                         <input type="checkbox" value="">推荐
                     </label>
@@ -138,22 +153,16 @@
                         <input type="checkbox" value="">评论
                     </label>
                 </div>
-                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-sm">
+                <div class="col-sm-10 col-sm-offset-1 y-paddingTop-sm">
                     <div class="y-float-right">
                         <button class="btn btn-default y-marginLR-sm">返回</button>
                         <button class="btn btn-success y-marginLR-sm">保存</button>
                         <button class="btn btn-info y-marginLR-sm">发布</button>
                     </div>
-
                 </div>
-
-
             </div>
         </form>
-
-
     </div>
-
 </div>
 
 
@@ -179,10 +188,8 @@
             <div class="col-sm-4 y-firstchild-p y-Border-left text-center">
                 <p>博    客</p>
                 <p class="y-fontType-grey">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
-
             </div>
         </div>
-
 
         <div class="text-center y-marginBottom-xs y-Border-top">
             <p class="y-fontType-grey y-marginTop-sm">Copyright © 2019 - 2020 阴险の暗示 Designed by Unravel</p>
@@ -190,6 +197,32 @@
 
     </div>
 </div>
+
+<script src="../../static/js/jquery-3.4.1.min.js"></script>
+<script src="../../static/js/bootstrap.min.js"></script>
+<script src="../../static/lib/editormd/editormd.min.js"></script>
+<script type="text/javascript">
+    var testEditor;
+
+    $(function() {
+        testEditor = editormd("test-editormd", {
+            width   : "100%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "../../static/lib/editormd/lib/"
+        });
+
+        /*
+        // or
+        testEditor = editormd({
+            id      : "test-editormd",
+            width   : "90%",
+            height  : 640,
+            path    : "../lib/"
+        });
+        */
+    });
+</script>
 
 </body>
 

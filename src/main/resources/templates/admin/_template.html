@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>博客发布</title>
+
+    <link rel="stylesheet" href="../../static/css/myblog/admin.css">
+
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <script src="../../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!--导航-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <p class="y-fontType-blue y-margin-sm">后台管理</p>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#"><span class="glyphicon glyphicon-home mini"></span>&nbsp;博客</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-th-list mini"></span>&nbsp;分类</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-tags mini"></span>&nbsp;标签</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="../../static/images/demo/2.jpg" class="img-circle y-width-22">&nbsp;
+                        <h5 class="y-fontType-bright y-oneLine">余童<span class="caret"></span></h5>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="text-center "><a href="#">修改密码</a></li>
+                        <li class="text-center"><a href="#">修改信息</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="text-center"><a href="#">退出账号</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--中间内容-->
+<div class="container-fluid y-background-piture1">
+    <div class="y-marginTB-md">
+        <form action="#">
+            <div class="y-border-bottom y-paddingBottom-sm">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="y-float-right">
+                        <div class="btn-group a" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">新 建</button>
+                            <button type="button" class="btn btn-default">列 表</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row y-clearboth y-paddingTop-md">
+                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-sm">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                原创 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">原创</a></li>
+                                <li><a href="#">转载</a></li>
+                                <li><a href="#">翻译</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control" aria-label="...">
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2 y-paddingTop-md">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                分类 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">错误日志</a></li>
+                                <li><a href="#">哈哈哈哈</a></li>
+                                <li><a href="#">黑河和和</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control" aria-label="...">
+                    </div>
+                </div>
+                <div class="col-sm-4 y-paddingTop-md">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                标签 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">错误日志</a></li>
+                                <li><a href="#">哈哈哈哈</a></li>
+                                <li><a href="#">黑河和和</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control" aria-label="...">
+                    </div>
+                </div>
+
+                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-md">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                首图地址
+                            </button>
+                        </div>
+                        <input type="text" class="form-control" aria-label="...">
+                    </div>
+                </div>
+                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-md">
+                    <textarea class="form-control" rows="10" placeholder="博客描述*"></textarea>
+                </div>
+                <div class="checkbox col-sm-8 col-sm-offset-2 y-paddingTop-sm">
+                    <label>
+                        <input type="checkbox" value="">推荐
+                    </label>
+                    <label>
+                        <input type="checkbox" value="">转载声明
+                    </label>
+                    <label>
+                        <input type="checkbox" value="">赞赏
+                    </label>
+                    <label>
+                        <input type="checkbox" value="">评论
+                    </label>
+                </div>
+                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-sm">
+                    <div class="y-float-right">
+                        <button class="btn btn-default y-marginLR-sm">返回</button>
+                        <button class="btn btn-success y-marginLR-sm">保存</button>
+                        <button class="btn btn-info y-marginLR-sm">发布</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </form>
+
+
+    </div>
+
+</div>
+
+
+<!-----------下边 footer----------->
+<div class="container-fluid y-background-black">
+    <div class="container">
+        <div class="row y-a-decorate y-margin-footer">
+            <div class="col-sm-2 text-center">
+                <img class="img-rounded y-width-100" src="../../static/images/wechat.jpg">
+            </div>
+            <div class="col-sm-3 y-firstchild-p y-Border-left text-center">
+                <p>最新博客</p>
+                <p><a href="https://www.baidu.com" target="_blank">用户故事（User Story）</a></p>
+                <p><a href="#">用户故事（User Story）</a></p>
+                <p><a href="#">用户故事（User Story）</a></p>
+            </div>
+            <div class="col-sm-3 y-firstchild-p y-Border-left text-center">
+                <p>联 系 我</p>
+                <p><a href="#">Email：740265793@qq.com</a></p>
+                <p><a href="#">QQ：740265793</a></p>
+                <br>
+            </div>
+            <div class="col-sm-4 y-firstchild-p y-Border-left text-center">
+                <p>博    客</p>
+                <p class="y-fontType-grey">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+
+            </div>
+        </div>
+
+
+        <div class="text-center y-marginBottom-xs y-Border-top">
+            <p class="y-fontType-grey y-marginTop-sm">Copyright © 2019 - 2020 阴险の暗示 Designed by Unravel</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
