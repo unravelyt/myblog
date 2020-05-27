@@ -54,6 +54,9 @@ a:active ：这个说是已被激活的样式，简单得说就是能把鼠标�
 .y-marginTop-sm{
     margin-top: 5px;
 }
+.y-marginTop-smx{
+    margin-top: 10px;
+}
 .y-marginTop-md{
     margin-top: 60px;
 }
@@ -63,6 +66,14 @@ a:active ：这个说是已被激活的样式，简单得说就是能把鼠标�
 .y-marginTB-md{
     margin: 80px 0 100px 0;
 }
+.y-marginTB-lg{
+    margin: 100px 0 200px 0;
+}
+
+.y-paddingTB-login{
+    padding: 100px 0 700px 0;
+}
+
 .y-margin-footer{
     margin: 50px 0 20px 0;
 }
@@ -76,6 +87,9 @@ a:active ：这个说是已被激活的样式，简单得说就是能把鼠标�
 }
 .y-paddingTop-sm{
     padding-top: 20px;
+}
+.y-paddingTop-xs{
+    padding-top: 8px;
 }
 .y-paddingTop-md{
     padding-top: 40px;
@@ -108,6 +122,9 @@ a:active ：这个说是已被激活的样式，简单得说就是能把鼠标�
 }
 .y-width-100{
     width: 100px;
+}
+.y-width-200{
+    width: 400px;
 }
 
 /*      设置背景        */

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>博客发布</title>
+    <title>博客管理</title>
 
     <link rel="stylesheet" href="../../static/css/myblog/admin.css">
 
@@ -29,7 +29,7 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#"><span class="glyphicon glyphicon-home mini"></span>&nbsp;博客</a></li>
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-home mini"></span>&nbsp;博客</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-th-list mini"></span>&nbsp;分类</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-tags mini"></span>&nbsp;标签</a></li>
             </ul>
@@ -60,100 +60,104 @@
                     <div class="y-float-right">
                         <div class="btn-group a" role="group" aria-label="...">
                             <button type="button" class="btn btn-default">新 建</button>
-                            <button type="button" class="btn btn-default">列 表</button>
+                            <button type="button" class="btn btn-default active">列 表</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row y-clearboth y-paddingTop-md">
-                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-sm">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                原创 <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">原创</a></li>
-                                <li><a href="#">转载</a></li>
-                                <li><a href="#">翻译</a></li>
-                            </ul>
+                <div class="col-sm-10 col-sm-offset-1 y-paddingTop-sm">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="y-marginTop-smx">
+                                <form class="form-inline y-marginTop-smx">
+                                    <div class="form-group col-sm-4">
+                                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="标题">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <select class="form-control">
+                                            <option selected>默认分类</option>
+                                            <option>分类1</option>
+                                            <option>分类12</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2 y-paddingTop-xs">
+                                        <input type="checkbox" id="inlineCheckbox3" value="option3">&nbsp;&nbsp;推&nbsp;荐
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn btn-primary">搜索</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" aria-label="...">
                     </div>
-                </div>
-                <div class="col-sm-4 col-sm-offset-2 y-paddingTop-md">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                分类 <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">错误日志</a></li>
-                                <li><a href="#">哈哈哈哈</a></li>
-                                <li><a href="#">黑河和和</a></li>
-                            </ul>
+                    <div class="panel panel-info">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading text-center">
+                            博客列表
+                            <button href="#" class="btn btn-success btn-xs y-float-right">新增</button>
                         </div>
-                        <input type="text" class="form-control" aria-label="...">
-                    </div>
-                </div>
-                <div class="col-sm-4 y-paddingTop-md">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                标签 <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">错误日志</a></li>
-                                <li><a href="#">哈哈哈哈</a></li>
-                                <li><a href="#">黑河和和</a></li>
-                            </ul>
+                        <!-- Table -->
+                        <table class="table">
+                            <tr>
+                                <th></th>
+                                <th>标题</th>
+                                <th>类型</th>
+                                <th>推荐</th>
+                                <th>状态</th>
+                                <th>更新时间</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>21</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>21</td>
+                                <td>2020-5-26</td>
+                                <td>
+                                    <button class="btn btn-info btn-xs">编辑</button>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>21</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>21</td>
+                                <td>2020-5-26</td>
+                                <td>
+                                    <button class="btn btn-info btn-xs">编辑</button>
+                                    <button class="btn btn-danger btn-xs">删除</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="panel-body">
+                            <nav aria-label="...">
+                                <ul class="pager">
+                                    <li><a href="#">上一页</a></li>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </nav>
                         </div>
-                        <input type="text" class="form-control" aria-label="...">
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                    </div>
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Well done!</strong> You successfully read this important alert message.
                     </div>
                 </div>
-
-                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-md">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                首图地址
-                            </button>
-                        </div>
-                        <input type="text" class="form-control" aria-label="...">
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-md">
-                    <textarea class="form-control" rows="10" placeholder="博客描述*"></textarea>
-                </div>
-                <div class="checkbox col-sm-8 col-sm-offset-2 y-paddingTop-sm">
-                    <label>
-                        <input type="checkbox" value="">推荐
-                    </label>
-                    <label>
-                        <input type="checkbox" value="">转载声明
-                    </label>
-                    <label>
-                        <input type="checkbox" value="">赞赏
-                    </label>
-                    <label>
-                        <input type="checkbox" value="">评论
-                    </label>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 y-paddingTop-sm">
-                    <div class="y-float-right">
-                        <button class="btn btn-default y-marginLR-sm">返回</button>
-                        <button class="btn btn-success y-marginLR-sm">保存</button>
-                        <button class="btn btn-info y-marginLR-sm">发布</button>
-                    </div>
-
-                </div>
-
-
             </div>
         </form>
-
-
     </div>
 
 </div>
