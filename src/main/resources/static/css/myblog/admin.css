@@ -140,7 +140,17 @@ a:active ：这个说是已被激活的样式，简单得说就是能把鼠标�
     color: whitesmoke;
     font-weight: bolder;
 }
+.login-box {
+    width: 100%;
+    max-width:500px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
 
+    margin-top: -200px;
+    /*设置负值，为要定位子盒子的一半高度*/
+
+}
 
 
 
