@@ -48,6 +48,9 @@ a:active ：这个说是已被激活的样式，简单得说就是能把鼠标�
 }
 
 /*      外边距     */
+.y-marginBottom-md{
+    margin: 0px 0px 120px 0;
+}
 .y-margin-sm{
     margin: 10px 30px;
 }
@@ -84,6 +87,9 @@ a:active ：这个说是已被激活的样式，简单得说就是能把鼠标�
 /*      内边距     */
 .y-paddingBottom-sm{
     padding-bottom: 40px;
+}
+.y-paddingBottom-md{
+    padding-bottom: 300px;
 }
 .y-paddingTop-sm{
     padding-top: 20px;
