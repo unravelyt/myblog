@@ -19,8 +19,19 @@
     <link rel="stylesheet" href="../static/lib/prism/prism.css">
     <script src="../static/lib/prism/prism.js"></script>
 
+    <!--目录-->
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
+
+    <!--生成二维码-->
+    <script src="../static/lib/qrcode/qrcode.min.js"></script>
+    <!--目录-->
+    <script src="../static/lib/tocbot/tocbot.min.js"></script>
     <script src="../static/js/jquery-3.4.1.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
+    <!--平滑滚动-->
+    <script src="../static/lib/scrollTo/jquery.scrollTo.min.js"></script>
+    <!--滚动监测-->
+    <script src="../static/lib/waypoint/jquery.waypoints.min.js"></script>
 
 </head>
 <body>
@@ -58,7 +69,7 @@
 </nav>
 
 <!--中间内容-->
-<div class="container-fluid mid-body">
+<div id="waypoint" class="container-fluid mid-body">
     <div class="col-sm-10 col-sm-offset-1">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -87,7 +98,7 @@
                     <h2 class="text-center">关于刻意练习的清单</h2>
 
                     <!--中间主要内容部分-->
-                    <div id="wrapper" class="typo typo-selection animate__animated animate__pulse">
+                    <div id="wrapper" class="typo typo-selection animate__animated animate__pulse js-toc-content">
 
                         <h1>中文网页重设与排版：<i class="serif">Typo.css</i></h1><br/>
 
@@ -296,20 +307,7 @@
                             demo you're watching now. The following code is the best way to render typo in Chinese:
                         </p>
                         <pre>
-/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
-h1,h2,h3,h4,h5,h6 {
-    line-height:1;font-family:Arial,sans-serif;margin:1.4em 0 0.8em;
-}
-h1{font-size:1.8em;}
-h2{font-size:1.6em;}
-h3{font-size:1.4em;}
-h4{font-size:1.2em;}
-h5,h6{font-size:1em;}
 
-/* 现代排版：保证块/段落之间的空白隔行 */
-.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {
-    margin:1em 0 0.6em;
-}
 </pre>
 
                         <h3 id="section3">三、附录</h3>
@@ -468,6 +466,12 @@ h5,h6{font-size:1em;}
 
                         <p><i class="serif">Typo.css</i> 基于 <a href="http://zh.wikipedia.org/wiki/MIT_License">MIT License</a> 开源，使用代码只需说明来源，或者引用 <a
                                 href="http://typo.sofi.sh/license.txt">license.txt</a> 即可。</p>
+
+                        <!--赞赏-->
+                        <div class="text-center">
+                            <a tabindex="0" class="btn btn-lg btn-success" role="button" data-placement="top" data-toggle="popover" data-trigger="focus">赞&nbsp;&nbsp;赏</a>
+                        </div>
+
                     </div>
 
                 </li>
@@ -475,8 +479,8 @@ h5,h6{font-size:1em;}
                     <div class="y-tbpadding-sm">
                         <span class="col-xs-8 y-tbpadding-sm">
                             <ul>
-                                <li>作者：<span>李仁密</span><a href="#" target="_blank">（联系作者）</a></li>
-                                <li>发表时间：<span>2017-10-02 09:08</span></li>
+                                <li>作者：<span>余童</span><a href="#" target="_blank">（联系作者）</a></li>
+                                <li>发表时间：<span>2020-6-20 09:08</span></li>
                                 <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
                                 <li>公众号转载：请在文末添加作者公众号二维码</li>
                             </ul>
@@ -540,6 +544,24 @@ h5,h6{font-size:1em;}
     </div>
 </div>
 
+<div class="y-position y-right-bottom y-margin-rb" id="toobar" style="display: none">
+    <div class="btn-group-vertical" role="group">
+        <button type="button" class="btn btn-info" tabindex="0" data-placement="left" data-toggle="content" data-trigger="focus">
+            目录
+        </button>
+        <button type="button" class="btn btn-info">留言</button>
+
+        <button type="button" class="btn btn-default" tabindex="0" data-placement="left" data-toggle="qrcodeButtom" data-trigger="focus">
+            <span class="glyphicon glyphicon glyphicon-link"></span>
+        </button>
+        <button type="button" id="toTop" class="btn btn-default">
+            <span class="glyphicon glyphicon-menu-up"></span>
+        </button>
+
+    </div>
+</div>
+
+
 <!-----------下边 footer----------->
 <div class="container-fluid media-bottom footer">
     <div class="container second_footer">
@@ -573,22 +595,90 @@ h5,h6{font-size:1em;}
         </div>
     </div>
 </div>
+<!--侧边目录-->
+<div class="hidden" id="content">
+    <ol class="js-toc"></ol>
+</div>
+<div class="hidden" id="qrcode">
+    <div class="text-center">微信扫一扫</div>
+</div>
+
 
 <script>
     $(function () {
+        /*赞赏弹出二维码*/
         $('[data-toggle="popover"]').popover({
             animation:true,
             html:true,
             container:"body",
-            content:"<div>\n" +
-                "    <img src=\"../static/images/wechat.jpg\" style=\"float: left\" width=\"50%\">\n" +
-                "    <img src=\"../static/images/wechat.jpg\" style=\"float: right\" width=\"50%\">\n" +
+            content:"<div >\n" +
+                "    <img src=\"../static/images/wechat.jpg\" style=\"float: left; width: 50%\">\n" +
+                "    <img src=\"../static/images/wechat.jpg\" style=\"float: right; width: 50%\">\n" +
                 "    <span style=\"width: 50%; float: left\" class=\"text-center\">微信</span>\n" +
                 "    <span style=\"width: 50%; float: right\" class=\"text-center\">支付宝</span>\n" +
                 "</div>"
             }
         )
+        /*侧边目录*/
+        $('[data-toggle="content"]').popover({
+                animation:true,
+                html:true,
+                container:"body",
+                content:function contentt(){
+                    return document.getElementById("content").innerHTML;
+                }
+            }
+        )
+
+        $('[data-toggle="qrcodeButtom"]').popover({
+                animation:true,
+                html:true,
+                container:"body",
+                content:function www(){
+                    return document.getElementById("qrcode").innerHTML;
+                }
+            }
+        )
+
+    });
+    /*平滑滚动*/
+    $("#toTop").click(function () {
+
+        $(window).scrollTo(0,500)
+    });
+    /*生成二维码*/
+    var qrcode = new QRCode("qrcode", {
+        text: "http://jindo.dev.naver.com/collie",
+        width: 100,
+        height: 100,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+
+    /*滚动监测*/
+    var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function(direction) {
+            if (direction =='down'){
+                $('#toobar').show(100);
+            }else {
+                $('#toobar').hide(100);
+            }
+            console.log('Scrolled to waypoint!')
+        }
     })
+    /*侧边目录*/
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
 </script>
 </body>
 </html>

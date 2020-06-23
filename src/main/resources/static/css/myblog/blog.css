@@ -10,8 +10,24 @@
 .y-floatleft{
     float: left;
 }
+/* position 布局  */
+
+.y-position{
+    position: fixed;
+    z-index: 10 !important;
+
+}
+.y-right-bottom{
+    bottom: 0 !important;
+    right: 0 !important;
+}
 
 /*右外间距*/
+.y-margin-rb{
+    margin-bottom: 100px;
+    margin-right: 10px;
+}
+
 .y-rMargin-sm{
     margin: 0 30px 0 0;
 }
@@ -38,7 +54,6 @@
 .y-padding-mid{
     margin: 70px;
 }
-
 .y-padding-tags{
     margin: 2px 4px;
 }
